@@ -3,11 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>Gulp Test</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
-    <h1>Gulp 테스트중입니다!!</h1>
-    <img src="../images/dummy/22.jpg" alt="">
-    <script type="text/javascript" src="../js/result.js"></script>
+    <div id="wrap">
+        <div class="row">
+          <div class="col-md-4">
+              <div class="title">
+                  <h1 class="name">Lee Ja-Yong</h1>
+                  <span>front-end developer</span>
+              </div>
+
+              <article class="box introduce">
+              안녕하세요 이자용입니다. 저는 86년생으로 경영학/시각디자인학과를 졸업하고 현재 프론트엔드 개발자로 일하고 있습니다.
+              프리랜서로 일하고 있으며, 그림그리기와, 락음악, 축구를 좋아합니다. 저의 작업물을 보시고싶으시다면 아래 리스트를 살펴보시면 됩니다.
+              </article>
+
+              <div class="box contact">
+                  <p>email : <a href="mailto:yongs7786@gmail.com">yongs7786@gmail.com</a></p>
+                  <p>cellPhone : <a href="tel:010-9853-8477">010-9853-8477</a></p>
+              </div>
+
+
+              <ul class="box sns">
+                  <li><a href="#">facebook</a></li>
+                  <li><a href="#">instagram</a></li>
+                  <li><a href="#">blog</a></li>
+              </ul>
+
+              <ul class="box skill">
+                  <li>html</li>
+                  <li>css</li>
+                  <li>javascript</li>
+                  <li>jquery</li>
+                  <li>angular</li>
+                  <li>react</li>
+                  <li>node.js</li>
+                  <li>sass</li>
+                  <li>gulp</li>
+                  <li>photoshop</li>
+              </ul>
+
+          </div>
+          <div class="col-md-2">
+              <div class="title"><h1>career</h1></div>
+              <ul class="box career">
+                  <li><a href="#">clip service</a></li>
+                  <li><a href="#">newriever</a></li>
+                  <li><a href="#">hackers</a></li>
+                  <li><a href="#">market kurly</a></li>
+              </ul>
+
+
+          </div>
+          <div class="col-md-4">
+              <div class="box img_area">
+                <ul>
+                    <li><img src="../images/clip.jpg" alt=""></li>
+                    <li><img src="../images/new.jpg" alt=""></li>
+                    <li><img src="../images/hackers.png" alt=""></li>
+                    <li><img src="../images/kurly.jpg" alt=""></li>
+                    <li><img src="../images/me.jpg" alt=""></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div class="box grid">
+
+            <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
+            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
+            <div class="grid-sizer"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
+            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
+        </div>
+
+    </div>
 </body>
+<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.grid').masonry({
+    // set itemSelector so .grid-sizer is not used in layout
+    itemSelector: '.grid-item',
+    // use element for option
+    columnWidth: 200,
+    percentPosition: true
+    })
+
+
+    var $career = $(".career li");
+    $career.eq(0).on("mouseenter click",function(){
+        $("#wrap").removeClass().addClass("blue");
+        $(".img_area li").hide().eq(0).fadeIn("fast");
+    });
+    $career.eq(1).on("mouseenter click",function(){
+        $("#wrap").removeClass().addClass("yellow");
+        $(".img_area li").hide().eq(1).fadeIn("fast");
+    });
+    $career.eq(2).on("mouseenter click",function(){
+        $("#wrap").removeClass().addClass("purple");
+        $(".img_area li").hide().eq(2).fadeIn("fast");
+    });
+    $career.eq(3).on("mouseenter click",function(){
+        $("#wrap").removeClass().addClass("green");
+        $(".img_area li").hide().eq(3).fadeIn("fast");
+    });
+
+    $career.on("mouseleave",function(){
+        $("#wrap").removeClass()
+        $(".img_area li").fadeOut("fast");
+    });
+    $(".name").on("mouseenter",function(){
+        $(".img_area li").hide().eq(4).fadeIn("fast");
+    });
+    $(".name").on("mouseleave",function(){
+        $("#wrap").removeClass()
+        $(".img_area li").fadeOut("fast");
+    });
+});
+</script>
 </html>
