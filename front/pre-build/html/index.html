@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
-    <div class="wrap left_side">
+    <div id="wrap">
         <div class="row">
           <div class="col-xs-12 col-sm-4">
               <div class="title">
@@ -82,16 +82,6 @@
         </div>
 
     </div>
-	<div class="wrap right_side">
-		<div class="box grid">
-            <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
-            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
-            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
-        </div>
-	</div>
 </body>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
@@ -108,66 +98,35 @@ $(document).ready(function(){
 
     var $career = $(".career li");
     $career.eq(0).on("mouseenter click",function(){
-        $(".wrap").removeClass().addClass("blue");
+        $("#wrap").removeClass().addClass("blue");
         $(".img_area li").hide().eq(0).fadeIn("fast");
     });
     $career.eq(1).on("mouseenter click",function(){
-        $(".wrap").removeClass().addClass("yellow");
+        $("#wrap").removeClass().addClass("yellow");
         $(".img_area li").hide().eq(1).fadeIn("fast");
     });
     $career.eq(2).on("mouseenter click",function(){
-        $(".wrap").removeClass().addClass("purple");
+        $("#wrap").removeClass().addClass("purple");
         $(".img_area li").hide().eq(2).fadeIn("fast");
     });
     $career.eq(3).on("mouseenter click",function(){
-        $(".wrap").removeClass().addClass("green");
+        $("#wrap").removeClass().addClass("green");
         $(".img_area li").hide().eq(3).fadeIn("fast");
     });
 
     $career.on("mouseleave",function(){
-        $(".wrap").removeClass()
+        $("#wrap").removeClass()
         $(".img_area li").fadeOut("fast");
     });
     $(".name").on("mouseenter",function(){
         $(".img_area li").hide().eq(4).fadeIn("fast");
     });
     $(".name").on("mouseleave",function(){
-        $(".wrap").removeClass()
+        $("#wrap").removeClass()
         $(".img_area li").fadeOut("fast");
     });
 
-	var warpToggle = false;
-	$(".link").on("click",function(e){
-		e.preventDefault();
 
-		if(warpToggle == false){
-			warpToggle = true;
-			$(".left_side").animate({
-				width:0,
-				padding:0,
-				overflow:"hidden"
-			});
-			$(".right_side").animate({
-				width:100+"%",
-				padding:20+"px",
-				overflow:"visible"
-			});
-		}else{
-			warpToggle = false;
-			$(".left_side").animate({
-				width:100+"%",
-				padding:20+"px",
-				overflow:"visible"
-			});
-			$(".right_side").animate({
-				width:0,
-				padding:0,
-				overflow:"hidden"
-			});
-		}
-
-
-	});
 });
 </script>
 </html>

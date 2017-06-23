@@ -1,13 +1,11 @@
-.wrap{
-    float:left;width:100%;height:100%;padding:20px;
+#wrap{
+    width:100%;height:100%;padding:20px;
     -webkit-transition:background-color 0.5s;
     transition:background-color 0.5s;
     &.blue{background-color:#c0d6d9}
     &.yellow{background-color:#fefbe1}
     &.green{background-color:#bbe7c3}
     &.purple{background-color:#d7cfe5}
-	&.left_side{width:100%;}
-	&.right_side{overflow:hidden;width:0%;}
 }
 
 .title{
