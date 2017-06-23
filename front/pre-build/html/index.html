@@ -2,23 +2,23 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Gulp Test</title>
+    <title>Lee Ja-Yong</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
 	<link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
-    <div id="wrap">
+    <div class="wrap left_side">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-xs-12 col-sm-4">
               <div class="title">
                   <h1 class="name">Lee Ja-Yong</h1>
                   <span>front-end developer</span>
               </div>
 
               <article class="box introduce">
-              안녕하세요 이자용입니다. 저는 86년생으로 경영학/시각디자인학과를 졸업하고 현재 프론트엔드 개발자로 일하고 있습니다.
-              프리랜서로 일하고 있으며, 그림그리기와, 락음악, 축구를 좋아합니다. 저의 작업물을 보시고싶으시다면 아래 리스트를 살펴보시면 됩니다.
+              안녕하세요 <strong>이자용</strong>입니다. 저는 86년생으로 경영학/시각디자인학과를 졸업하고 현재 프리랜서 프론트엔드 개발자로 일하고 있습니다. 그림그리기와, 음악, 안산그리너스 축구팀을 좋아합니다. 저의 작업물을 보시고싶으시다면 아래 리스트를 살펴보시면 됩니다.
               </article>
 
               <div class="box contact">
@@ -28,9 +28,9 @@
 
 
               <ul class="box sns">
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">instagram</a></li>
-                  <li><a href="#">blog</a></li>
+                  <li class="facebook"><a href="#">facebook</a></li>
+                  <li class="instagram"><a href="#">instagram</a></li>
+                  <li class="blog"><a href="#">blog</a></li>
               </ul>
 
               <ul class="box skill">
@@ -47,8 +47,8 @@
               </ul>
 
           </div>
-          <div class="col-md-2">
-              <div class="title"><h1>career</h1></div>
+          <div class="col-xs-12 col-sm-2">
+              <div class="title"><h2 class="name">career</h2></div>
               <ul class="box career">
                   <li><a href="#">clip service</a></li>
                   <li><a href="#">newriever</a></li>
@@ -58,8 +58,8 @@
 
 
           </div>
-          <div class="col-md-4">
-		      <a href="/" class="link">b-side</a>
+          <div class="col-xs-12 col-sm-4">
+		      <a href="/" class="link">b-side →</a>
               <div class="box img_area">
                 <ul>
                     <li><img src="../images/clip.jpg" alt=""></li>
@@ -72,17 +72,26 @@
           </div>
         </div>
 
-        <div class="box grid">
-
+		<div class="box grid">
             <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
             <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
             <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
-            <div class="grid-sizer"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
             <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
             <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
         </div>
 
     </div>
+	<div class="wrap right_side">
+		<div class="box grid">
+            <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
+            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
+            <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
+            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
+        </div>
+	</div>
 </body>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
@@ -99,33 +108,66 @@ $(document).ready(function(){
 
     var $career = $(".career li");
     $career.eq(0).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("blue");
+        $(".wrap").removeClass().addClass("blue");
         $(".img_area li").hide().eq(0).fadeIn("fast");
     });
     $career.eq(1).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("yellow");
+        $(".wrap").removeClass().addClass("yellow");
         $(".img_area li").hide().eq(1).fadeIn("fast");
     });
     $career.eq(2).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("purple");
+        $(".wrap").removeClass().addClass("purple");
         $(".img_area li").hide().eq(2).fadeIn("fast");
     });
     $career.eq(3).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("green");
+        $(".wrap").removeClass().addClass("green");
         $(".img_area li").hide().eq(3).fadeIn("fast");
     });
 
     $career.on("mouseleave",function(){
-        $("#wrap").removeClass()
+        $(".wrap").removeClass()
         $(".img_area li").fadeOut("fast");
     });
     $(".name").on("mouseenter",function(){
         $(".img_area li").hide().eq(4).fadeIn("fast");
     });
     $(".name").on("mouseleave",function(){
-        $("#wrap").removeClass()
+        $(".wrap").removeClass()
         $(".img_area li").fadeOut("fast");
     });
+
+	var warpToggle = false;
+	$(".link").on("click",function(e){
+		e.preventDefault();
+
+		if(warpToggle == false){
+			warpToggle = true;
+			$(".left_side").animate({
+				width:0,
+				padding:0,
+				overflow:"hidden"
+			});
+			$(".right_side").animate({
+				width:100+"%",
+				padding:20+"px",
+				overflow:"visible"
+			});
+		}else{
+			warpToggle = false;
+			$(".left_side").animate({
+				width:100+"%",
+				padding:20+"px",
+				overflow:"visible"
+			});
+			$(".right_side").animate({
+				width:0,
+				padding:0,
+				overflow:"hidden"
+			});
+		}
+
+
+	});
 });
 </script>
 </html>
