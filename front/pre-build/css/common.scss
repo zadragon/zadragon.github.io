@@ -7,7 +7,6 @@
     &.green{background-color:#bbe7c3}
     &.purple{background-color:#d7cfe5}
 }
-
 .title{
     .name{display:inline-block;margin-top:40px;font-size:1.2em;font-weight:bold;}
     span{display:block;margin-top:5px;}
@@ -45,8 +44,6 @@
 	overflow:hidden;
 	li{float:left;margin:0 5px;line-height:1.4}
 }
-
-
 .grid-sizer,
 .grid-item { width: 20%; img{width:100%;height:auto}}
 /* 2 columns */
