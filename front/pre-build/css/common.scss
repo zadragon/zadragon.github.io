@@ -8,7 +8,7 @@
     &.purple{background-color:#d7cfe5}
 }
 .title{
-    h1{font-size:1.2em;font-weight:bold;}
+    h1{display:inline-block;font-size:1.2em;font-weight:bold;}
     span{display:block;margin-top:5px;}
 }
 .box{
@@ -38,3 +38,4 @@
 .grid-item { width: 20%; img{width:100%;height:auto}}
 /* 2 columns */
 .grid-item--width2 { width: 40%; }
+.link{text-decoration:underline !important;}
