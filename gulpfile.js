@@ -43,7 +43,7 @@ gulp.task('htmlmin', function() {
 
 gulp.task('imagemin',function(){
     gulp.src(devPaths.images)
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest(buildSrc + '/images'));
 });
 

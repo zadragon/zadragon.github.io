@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.9&appId=1839908052907099";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div id="wrap">
         <div class="row">
           <div class="col-xs-12 col-sm-4">
               <div class="title">
-                  <h1 class="name ruda">Lee Ja-Yong</h1>
+                  <h1 class="name ruda">::Lee Ja-Yong::</h1>
                   <span>front-end developer</span>
 				  <p class="myPic"><span>이자용</span></p>
               </div>
@@ -28,9 +36,9 @@
               </div>
 
               <ul class="box sns">
-                  <li class="facebook"><a href="#">facebook</a></li>
-                  <li class="instagram"><a href="#">instagram</a></li>
-                  <li class="blog"><a href="#">blog</a></li>
+                  <li class="facebook"><a href="https://www.facebook.com/profile.php?id=100007033685953" target="_black">facebook</a></li>
+                  <li class="instagram"><a href="https://www.instagram.com/zayong86/" target="_black">instagram</a></li>
+                  <li class="blog"><a href="http://zadragon.tistory.com/" target="_black">blog</a></li>
               </ul>
 
               <ul class="box skill">
@@ -47,83 +55,60 @@
               </ul>
           </div>
           <div class="col-xs-12 col-sm-2">
-              <div class="title"><h2 class="name">career</h2></div>
+              <div class="title"><h2 class="name">Career</h2></div>
               <ul class="box career">
                   <li><a href="#">clip service</a></li>
                   <li><a href="#">newriever</a></li>
                   <li><a href="#">hackers</a></li>
                   <li><a href="#">market kurly</a></li>
               </ul>
-
-
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-12 col-sm-4 img_area">
 		      <a href="/" class="link">b-side →</a>
-			  <p class="myPic"><img src="../images/me.jpg" alt=""></p>
-              <div class="box img_area">
+              <div class="box">
+                <p class="myPic"><img src="../images/me.jpg" alt=""></p>
                 <ul>
-                    <li><img src="../images/clip.jpg" alt=""></li>
-                    <li><img src="../images/new.jpg" alt=""></li>
+                    <li><img src="../images/clip.png" alt=""></li>
+                    <li><img src="../images/new.png" alt=""></li>
                     <li><img src="../images/hackers.png" alt=""></li>
-                    <li><img src="../images/kurly.jpg" alt=""></li>
+                    <li><img src="../images/kurly.png" alt=""></li>
                 </ul>
               </div>
           </div>
         </div>
-
-		<div class="box grid">
-            <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
-            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
-            <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
-            <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
+        <div class="row">
+            <div class="box grid">
+                <div class="grid-sizer"><img src="../images/dummy/marrakesh6.jpg" alt=""></div>
+                <div class="grid-item"><img src="../images/dummy/marrakesh2.jpg" alt=""></div>
+                <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh3.jpg" alt=""></div>
+                <div class="grid-item"><img src="../images/dummy/marrakesh4.jpg" alt=""></div>
+                <div class="grid-item"><img src="../images/dummy/marrakesh5.jpg" alt=""></div>
+                <div class="grid-item grid-item--width2"><img src="../images/dummy/marrakesh1.jpg" alt=""></div>
+            </div>
         </div>
-
+        <div class="row">
+            <div class="box">
+                <div class="title"><h2 class="name">Comment here</h2></div>
+                <div class="fb-comments" data-href="https://zadragon.github.io/front/build/html/index.html" data-width="100%" data-numposts="5"></div>
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../js/result.js"></script>
 <script>
 $(document).ready(function(){
     $('.grid').masonry({
     // set itemSelector so .grid-sizer is not used in layout
     itemSelector: '.grid-item',
     // use element for option
-    columnWidth: 200,
+    columnWidth: '.grid-sizer',
     percentPosition: true
-    })
+});
 
 
-    var $career = $(".career li");
-    $career.eq(0).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("blue");
-        $(".img_area li").hide().eq(0).fadeIn("fast");
-    });
-    $career.eq(1).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("yellow");
-        $(".img_area li").hide().eq(1).fadeIn("fast");
-    });
-    $career.eq(2).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("purple");
-        $(".img_area li").hide().eq(2).fadeIn("fast");
-    });
-    $career.eq(3).on("mouseenter click",function(){
-        $("#wrap").removeClass().addClass("green");
-        $(".img_area li").hide().eq(3).fadeIn("fast");
-    });
 
-    $career.on("mouseleave",function(){
-        $("#wrap").removeClass()
-        $(".img_area li").fadeOut("fast");
-    });
-    $(".name").on("mouseenter",function(){
-        $(".img_area li").hide().eq(4).fadeIn("fast");
-    });
-    $(".name").on("mouseleave",function(){
-        $("#wrap").removeClass()
-        $(".img_area li").fadeOut("fast");
-    });
 
 
 });
