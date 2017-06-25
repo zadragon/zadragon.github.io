@@ -7,6 +7,9 @@
 	<link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/result.css">
+    <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="../js/result.js"></script>
 </head>
 <body>
     <div id="fb-root"></div>
@@ -93,23 +96,6 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="../lib/masonry/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="../js/result.js"></script>
-<script>
-$(document).ready(function(){
-    $('.grid').masonry({
-    // set itemSelector so .grid-sizer is not used in layout
-    itemSelector: '.grid-item',
-    // use element for option
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-});
 
 
-
-
-
-});
-</script>
 </html>
