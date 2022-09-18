@@ -4,24 +4,24 @@ var $img_area = $(".img_area");
 var $img_area_li = $(".img_area li");
 var idx;
 var toggle = {
-    careerEvent:function(){
+    careerEvent: function () {
         $career.on({
-            mouseenter:function(e){
+            mouseenter: function (e) {
                 e.preventDefault();
                 var $this = $(this);
                 idx = $this.index();
                 fe_toggle(idx);
             },
-            click:function(e){
+            click: function (e) {
                 e.preventDefault();
                 var $this = $(this);
                 idx = $this.index();
                 fe_toggle(idx);
             },
-        })
-    }
+        });
+    },
 };
-function fe_toggle(i){
+function fe_toggle(i) {
     $img_area.find(".myPic").hide();
     $img_area_li.eq(i).show().siblings().hide();
     switch (i) {
@@ -37,19 +37,25 @@ function fe_toggle(i){
         case 3:
             wrap.removeClass().addClass("purple");
             break;
+        case 4:
+            wrap.removeClass().addClass("white");
+            break;
+        case 5:
+            wrap.removeClass().addClass("skyblue");
+            break;
         default:
             wrap.removeClass();
             break;
     }
 }
 
-$(document).ready(function(){
-    $('.grid').masonry({
+$(document).ready(function () {
+    $(".grid").masonry({
         // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.grid-item',
+        itemSelector: ".grid-item",
         // use element for option
-        columnWidth: '.grid-sizer',
-        percentPosition: true
+        columnWidth: ".grid-sizer",
+        percentPosition: true,
     });
     toggle.careerEvent();
 });
