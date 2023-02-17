@@ -177,7 +177,8 @@ body.before-load {
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem {
 	display: block;
-	will-change: transform, opacity;
+	/* will-change: transform, opacity; */
+	opacity: 0;
 }
 .scroll-effect-end .sticky-elem {
 	/* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
@@ -217,7 +218,7 @@ body.before-load {
 	transition: 0.5s;
 }
 .before-load .container {
-	display: none;
+	/* display: none; */
 }
 .before-load .loading {
 	opacity: 1;
