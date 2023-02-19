@@ -145,7 +145,7 @@
 					return i;
 				}
 			};
-			imgElem.src = `./video/004/IMG_1582_${numSet(i)}.JPG`;
+			imgElem.src = `./video/004/IMG_1582_${numSet(i)}.jpg`;
 			sceneInfo[0].objs.videoImages.push(imgElem);
 		}
 
@@ -161,7 +161,7 @@
 					return i;
 				}
 			};
-			imgElem2.src = `./video/003/ocean-65560_${numSet(i)}.JPG`;
+			imgElem2.src = `./video/003/ocean-65560_${numSet(i)}.jpg`;
 			sceneInfo[2].objs.videoImages.push(imgElem2);
 		}
 
