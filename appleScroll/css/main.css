@@ -33,6 +33,10 @@ body.before-load {
 	width: 100%;
 	height: 44px;
 	padding: 0 1rem;
+	-webkit-backdrop-filter: saturate(180%) blur(15px);
+	-moz-backdrop-filter: saturate(180%) blur(15px);
+	-o-backdrop-filter: saturate(180%) blur(15px);
+	backdrop-filter: saturate(180%) blur(15px);
 }
 .local-nav {
 	position: absolute;
@@ -43,6 +47,10 @@ body.before-load {
 	height: 52px;
 	padding: 0 1rem;
 	border-bottom: 1px solid #ddd;
+	-webkit-backdrop-filter: saturate(180%) blur(15px);
+	-moz-backdrop-filter: saturate(180%) blur(15px);
+	-o-backdrop-filter: saturate(180%) blur(15px);
+	backdrop-filter: saturate(180%) blur(15px);
 }
 .local-nav-sticky .local-nav {
 	position: fixed;
@@ -86,6 +94,7 @@ body.before-load {
 	z-index: 5;
 	font-size: 4rem;
 	text-align: center;
+	color: #fff;
 }
 .main-message {
 	display: flex;
@@ -131,7 +140,7 @@ body.before-load {
 .pin {
 	width: 1px;
 	height: 100px;
-	background: rgb(29, 29, 31);
+	background: #fff;
 }
 #scroll-section-2 .b {
 	top: 10%;
@@ -171,6 +180,7 @@ body.before-load {
 	position: fixed;
 	left: 0;
 	width: 100%;
+	color: #fff;
 }
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
