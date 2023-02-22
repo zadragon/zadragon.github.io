@@ -21,8 +21,8 @@
 				videoImages: [],
 			},
 			values: {
-				videoImageCount: 229,
-				imageSequence: [0, 228],
+				videoImageCount: 150,
+				imageSequence: [0, 149],
 				canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
 				messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
 				messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
@@ -68,8 +68,8 @@
 				videoImages: [],
 			},
 			values: {
-				videoImageCount: 960,
-				imageSequence: [0, 959],
+				videoImageCount: 229,
+				imageSequence: [0, 228],
 				canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
 				canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
 				messageA_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
@@ -100,8 +100,16 @@
 			objs: {
 				container: document.querySelector("#scroll-section-3"),
 				canvasCaption: document.querySelector(".canvas-caption"),
+				canvas: document.querySelector(".image-blend-canvas"),
+				context: document.querySelector(".image-blend-canvas").getContext("2d"),
+				imagesPath: ["./images/blend-image-3.jpg", "./images/blend-image-4.jpg"],
+				images: [],
 			},
-			values: {},
+			values: {
+				rect1X: [0, 0, { start: 0, end: 0 }],
+				rect2X: [0, 0, { start: 0, end: 0 }],
+				rectStartY: 0,
+			},
 		},
 	];
 
@@ -109,16 +117,40 @@
 		let imgElem;
 		for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
 			imgElem = new Image();
-			imgElem.src = `./video/001/IMG_${6726 + i}.JPG`;
+			let numSet = (i) => {
+				if (i.toString().length === 1) {
+					return "00" + i;
+				} else if (i.toString().length === 2) {
+					return "0" + i;
+				} else if (i.toString().length === 3) {
+					return i;
+				}
+			};
+			imgElem.src = `./video/004/IMG_1582_${numSet(i)}.jpg`;
 			sceneInfo[0].objs.videoImages.push(imgElem);
 		}
 
 		let imgElem2;
 		for (let i = 0; i < sceneInfo[2].values.videoImageCount; i++) {
 			imgElem2 = new Image();
-
-			imgElem2.src = `./video/002/IMG_${7027 + i}.JPG`;
+			let numSet = (i) => {
+				if (i.toString().length === 1) {
+					return "00" + i;
+				} else if (i.toString().length === 2) {
+					return "0" + i;
+				} else if (i.toString().length === 3) {
+					return i;
+				}
+			};
+			imgElem2.src = `./video/003/ocean-65560_${numSet(i)}.jpg`;
 			sceneInfo[2].objs.videoImages.push(imgElem2);
+		}
+
+		let imgElem3;
+		for (let i = 0; i < sceneInfo[3].objs.imagesPath.length; i++) {
+			imgElem3 = new Image();
+			imgElem3.src = sceneInfo[3].objs.imagesPath[i];
+			sceneInfo[3].objs.images.push(imgElem3);
 		}
 	}
 	setCanvasImages();
@@ -280,6 +312,42 @@
 
 			case 3:
 				// console.log('3 play');
+				const widthRatio = window.innerWidth / objs.canvas.width;
+				const heightRatio = window.innerHeight / objs.canvas.height;
+				let canvasScaleRatio;
+
+				if (widthRatio <= heightRatio) {
+					//캔버스보다 브라우저창이 홀쭉한 경우
+					canvasScaleRatio = heightRatio;
+				} else {
+					//캔버스보다 브라우저창이 위아래로 납잡한 경우
+					canvasScaleRatio = widthRatio;
+				}
+				objs.canvas.style.transform = `scale(${canvasScaleRatio})`;
+				objs.context.fillStyle = "white";
+				objs.context.drawImage(objs.images[0], 0, 0);
+
+				//캔버스 사이즈에 맞춰 가정한 innerWidth와 innerHeight
+				const recalculatedInnerWidth = document.body.offsetWidth / canvasScaleRatio;
+				const recalculatedInnerHeight = window.innerHeight / canvasScaleRatio;
+
+				if (!values.rectStartY) {
+					values.rectStartY = objs.canvas.offsetTop + (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2;
+					values.rect1X[2].start = window.innerHeight / 2 / scrollHeight;
+					values.rect2X[2].start = window.innerHeight / 2 / scrollHeight;
+					values.rect1X[2].end = values.rectStartY / scrollHeight;
+					values.rect2X[2].end = values.rectStartY / scrollHeight;
+				}
+
+				const whiteRectWidth = recalculatedInnerWidth * 0.15;
+				values.rect1X[0] = (objs.canvas.width - recalculatedInnerWidth) / 2;
+				values.rect1X[1] = values.rect1X[0] - whiteRectWidth;
+				values.rect2X[0] = values.rect1X[0] + recalculatedInnerWidth - whiteRectWidth;
+				values.rect2X[1] = values.rect2X[0] + whiteRectWidth;
+
+				objs.context.fillRect(parseInt(calcValues(values.rect1X, currentYOffset)), 0, parseInt(whiteRectWidth), objs.canvas.height);
+				objs.context.fillRect(parseInt(calcValues(values.rect2X, currentYOffset)), 0, parseInt(whiteRectWidth), objs.canvas.height);
+
 				break;
 		}
 	}
