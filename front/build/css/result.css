@@ -1,255 +1,263 @@
 @charset "UTF-8";
 #wrap,
 #wrap.blue .grid {
-    -webkit-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
 }
 #wrap.blue,
 #wrap.blue .grid {
-    background-color: #c0d6d9;
+	background-color: #c0d6d9;
 }
 @font-face {
-    font-family: Ruda;
-    font-style: normal;
-    font-weight: 400;
-    src: local("Ruda Regular"), local("Ruda-Regular"), url(https://fonts.gstatic.com/s/ruda/v8/Y3cEAPkpwxcFpAfTchaPEA.ttf) format("truetype");
+	font-family: Ruda;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Ruda Regular"), local("Ruda-Regular"),
+		url(https://fonts.gstatic.com/s/ruda/v8/Y3cEAPkpwxcFpAfTchaPEA.ttf) format("truetype");
 }
 #wrap {
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    transition: background-color 0.5s;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	transition: background-color 0.5s;
 }
 #wrap.blue .grid {
-    transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 #wrap.yellow,
 #wrap.yellow .grid {
-    background-color: #fefbe1;
+	background-color: #fefbe1;
 }
 #wrap.green .grid,
 #wrap.yellow .grid {
-    -webkit-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
 }
 #wrap.yellow .grid {
-    transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 #wrap.green,
 #wrap.green .grid {
-    background-color: #bbe7c3;
+	background-color: #bbe7c3;
 }
 #wrap.green .grid {
-    transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 #wrap.purple,
 #wrap.purple .grid {
-    background-color: #d7cfe5;
+	background-color: #d7cfe5;
 }
 #wrap.purple .grid {
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 .title .name {
-    display: inline-block;
-    margin-top: 40px;
-    font-size: 1.2em;
-    font-weight: 700;
+	display: inline-block;
+	margin-top: 40px;
+	font-size: 1.2em;
+	font-weight: 700;
 }
 .title .myPic,
 .title span {
-    display: block;
+	display: block;
 }
 .box li,
 .title span {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 .title h1.name {
-    font-size: 30px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+	font-size: 30px;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
 }
 .title .myPic {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: url(../images/me.jpg) no-repeat;
-    background-size: cover;
-    border-radius: 50%;
+	position: absolute;
+	top: 40px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background: url(../images/me.jpg) no-repeat;
+	background-size: cover;
+	border-radius: 50%;
 }
 .title .myPic span {
-    text-indent: -99999em;
+	text-indent: -99999em;
 }
 .box {
-    padding-top: 30px;
+	padding-top: 30px;
 }
 .box li a {
-    display: inline-block;
+	display: inline-block;
 }
 .box li:first-child {
-    margin-top: 0;
+	margin-top: 0;
 }
 .introduce {
-    line-height: 1.4;
-    font-size: 14px;
+	line-height: 1.4;
+	font-size: 14px;
 }
 .contact p {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 .contact p:first-child {
-    margin-top: 0;
+	margin-top: 0;
 }
 .sns li {
-    padding-left: 20px;
+	padding-left: 20px;
 }
 .sns li.facebook {
-    background: url(../images/ico_facebook.png) no-repeat;
-    background-size: 15px 15px;
+	background: url(../images/ico_facebook.png) no-repeat;
+	background-size: 15px 15px;
 }
 .sns li.instagram {
-    background: url(../images/ico_instagram.png) no-repeat;
-    background-size: 15px 15px;
+	background: url(../images/ico_instagram.png) no-repeat;
+	background-size: 15px 15px;
 }
 .sns li.blog {
-    background: url(../images/ico_blog.png) no-repeat;
-    background-size: 15px 15px;
+	background: url(../images/ico_blog.png) no-repeat;
+	background-size: 15px 15px;
 }
 .career a {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 .img_area ul {
-    position: absolute;
-    top: -90px;
-    right: 15px;
-    width: 35%;
+	position: absolute;
+	top: -90px;
+	right: 15px;
+	width: 35%;
 }
 .img_area li {
-    display: none;
+	display: none;
 }
 .img_area .myPic {
-    display: none;
-    float: right;
-    width: 60%;
+	display: none;
+	float: right;
+	width: 60%;
 }
 .link,
 .link span {
-    display: block;
+	display: block;
 }
 .img_area img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 .skill {
-    overflow: hidden;
+	overflow: hidden;
 }
 .skill li {
-    float: left;
-    margin: 0 5px;
-    line-height: 1.4;
+	float: left;
+	margin: 0 5px;
+	line-height: 1.4;
 }
 .skill li:before {
-    content: "· ";
-    font-weight: 700;
+	content: "· ";
+	font-weight: 700;
 }
 .grid-item,
 .grid-sizer {
-    width: 20%;
+	width: 20%;
 }
 .grid-item img,
 .grid-sizer img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 .grid-item--width2 {
-    width: 40%;
+	width: 40%;
 }
 .link {
-    position: fixed;
-    top: -20px;
-    right: 15px;
-    margin-top: 40px;
-    text-decoration: underline !important;
-    background: #fff;
+	position: fixed;
+	top: -20px;
+	right: 15px;
+	margin-top: 40px;
+	text-decoration: underline !important;
+	background: #fff;
 }
 footer {
-    padding: 5px 0;
-    border-top: 2px solid #d3d3d3;
-    text-align: center;
+	padding: 5px 0;
+	border-top: 2px solid #d3d3d3;
+	text-align: center;
 }
 @media all and (min-width: 768px) {
-    .title .name {
-        margin-top: 0;
-    }
-    .title .myPic {
-        display: none;
-    }
-    .img_area .myPic {
-        display: block;
-    }
-    .img_area ul {
-        position: static;
-        margin-top: 62px;
-        width: 90%;
-        float: right;
-    }
-    .img_area ul li {
-        display: none;
-    }
-    .link {
-        margin-top: 0;
-        position: absolute;
-        top: 0;
-        right: 15px;
-    }
+	.title .name {
+		margin-top: 0;
+	}
+	.title .myPic {
+		display: none;
+	}
+	.img_area .myPic {
+		display: block;
+	}
+	.img_area ul {
+		position: static;
+		margin-top: 62px;
+		width: 90%;
+		float: right;
+	}
+	.img_area ul li {
+		display: none;
+	}
+	.link {
+		margin-top: 0;
+		position: absolute;
+		top: 0;
+		right: 15px;
+	}
 }
 @font-face {
-    font-family: "NanumGothic bold";
-    font-style: normal;
-    font-weight: 700;
-    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot);
-    src: local(※), url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff2) format("woff2"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff) format("woff"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.ttf) format("truetype");
+	font-family: "NanumGothic bold";
+	font-style: normal;
+	font-weight: 700;
+	src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot);
+	src: local(※),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff2) format("woff2"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff) format("woff"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: NanumGothic;
-    font-style: normal;
-    font-weight: 400;
-    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
-    src: local(※), url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format("woff2"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format("woff"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format("truetype");
+	font-family: NanumGothic;
+	font-style: normal;
+	font-weight: 400;
+	src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+	src: local(※),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix)
+			format("embedded-opentype"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format("woff2"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format("woff"),
+		url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Open Sans Light";
-    font-style: normal;
-    font-weight: 300;
-    src: url(font/OPENSANS-LIGHT.eot);
-    src: local(※), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+	font-family: "Open Sans Light";
+	font-style: normal;
+	font-weight: 300;
+	src: url(font/OPENSANS-LIGHT.eot);
+	src: local(※),
+		url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 @font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url(font/OpenSans-Regular.eot);
-    src: local(※), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url(font/OpenSans-Regular.eot);
+	src: local(※),
+		url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 @font-face {
-    font-family: "Open Sans Semibold";
-    font-style: normal;
-    font-weight: 600;
-    src: url(font/OPENSANS-SEMIBOLD.eot);
-    src: local(※), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+	font-family: "Open Sans Semibold";
+	font-style: normal;
+	font-weight: 600;
+	src: url(font/OPENSANS-SEMIBOLD.eot);
+	src: local(※),
+		url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 @font-face {
-    font-family: "Open Sans Bold";
-    font-style: normal;
-    font-weight: 700;
-    src: url(font/OPENSANS-BOLD.eot);
-    src: local(※), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+	font-family: "Open Sans Bold";
+	font-style: normal;
+	font-weight: 700;
+	src: url(font/OPENSANS-BOLD.eot);
+	src: local(※),
+		url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
 }
 blockquote,
 body,
@@ -279,72 +287,72 @@ td,
 textarea,
 th,
 ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 body,
 html {
-    width: 100%;
-    height: 100%;
-    font-family: "Open Sans Light", sans-serif;
-    font-size: 100%;
-    line-height: 1;
+	width: 100%;
+	height: 100%;
+	font-family: "Open Sans Light", sans-serif;
+	font-size: 100%;
+	line-height: 1;
 }
 li {
-    list-style: none;
-    text-indent: 0;
+	list-style: none;
+	text-indent: 0;
 }
 fieldset,
 img {
-    border: none;
+	border: none;
 }
 img {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 input,
 select,
 textarea {
-    font-size: 100%;
-    color: #626262;
-    background: #fff;
+	font-size: 100%;
+	color: #626262;
+	background: #fff;
 }
 button {
-    border: 0;
-    background: 0 0;
-    line-height: 0;
-    cursor: pointer;
+	border: 0;
+	background: 0 0;
+	line-height: 0;
+	cursor: pointer;
 }
 address,
 em {
-    font-style: normal;
+	font-style: normal;
 }
 ins {
-    text-decoration: none;
+	text-decoration: none;
 }
 table {
-    border-spacing: 0;
+	border-spacing: 0;
 }
 caption,
 hr {
-    display: none;
+	display: none;
 }
 a:active,
 a:link,
 a:visited {
-    color: #626262;
+	color: #626262;
 }
 .openLight {
-    font-family: "Open Sans Light" !important;
+	font-family: "Open Sans Light" !important;
 }
 .openRegular {
-    font-family: "Open Sans" !important;
+	font-family: "Open Sans" !important;
 }
 .openSemibold {
-    font-family: "Open Sans Semibold" !important;
+	font-family: "Open Sans Semibold" !important;
 }
 .openbold {
-    font-family: "Open Sans Bold" !important;
+	font-family: "Open Sans Bold" !important;
 }
 .ruda {
-    font-family: Ruda, sans-serif;
+	font-family: Ruda, sans-serif;
 }
